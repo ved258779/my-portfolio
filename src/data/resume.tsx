@@ -13,8 +13,17 @@ import {
   FileCode2,
   Sparkles,
   LayoutDashboard,
+  Brain,
+  Cpu,
+  Bot,
+  Server,
+  Cloud,
+  Layers,
+  Workflow,
+  Eye,
 } from "lucide-react";
 import { Python } from "@/components/ui/svgs/python";
+import { Docker } from "@/components/ui/svgs/docker";
 import { Csharp } from "@/components/ui/svgs/csharp";
 
 export const DATA = {
@@ -24,22 +33,56 @@ export const DATA = {
   location: "Patna, Bihar, India",
   locationLink: "https://www.google.com/maps/place/Patna,+Bihar",
   description:
-    "Data Analyst skilled in Python, SQL, and Power BI. Passionate about transforming raw data into actionable business insights.",
+    "Full Stack Data Scientist & AI Engineer skilled in Python, PyTorch, GenAI & Agentic Systems, MLOps, and Cloud deployments.",
   summary:
-    "Aspiring Data Analyst with hands-on experience in Python and SQL. Completed the [IBM Data Analyst Professional Certificate](https://www.coursera.org/professional-certificates/ibm-data-analyst), building real-world dashboards and analytical reports using Pandas, NumPy, and Power BI. Strong foundation in data cleaning, visualization, and translating raw data into actionable business insights.",
+    "Full Stack Data Scientist & AI Engineer with a B.Tech in Computer Science. Experienced across the complete data & AI lifecycle: from SQL data engineering and exploratory analytics to predictive modeling with Scikit-learn/XGBoost, deep learning with PyTorch/OpenCV, multi-agent GenAI applications (LangChain, Gemini API), and production microservices with FastAPI and Docker. Passionate about architecting scalable, data-driven systems with measurable business impact.",
   avatarUrl: "/ved.jpg",
   skills: [
+    // Programming & Core CS
     { name: "Python", icon: Python },
     { name: "SQL", icon: Database },
-    { name: "MySQL", icon: Database },
-    { name: "Power BI", icon: BarChart3 },
-    { name: "IBM Cognos Analytics", icon: PieChart },
+    { name: "C", icon: Code },
+    { name: "C++", icon: Csharp },
+
+    // Data Analysis & Statistics
     { name: "Pandas", icon: Table },
     { name: "NumPy", icon: Binary },
-    { name: "Data Cleaning", icon: Sparkles },
-    { name: "Dashboard Creation", icon: LayoutDashboard },
-    { name: "C", icon: Code2 },
-    { name: "C++", icon: Csharp },
+    { name: "Maths & Statistics for ML", icon: Binary },
+    { name: "Data Cleaning & EDA", icon: Sparkles },
+
+    // Machine Learning
+    { name: "Scikit-learn", icon: Cpu },
+    { name: "XGBoost & LightGBM", icon: Cpu },
+
+    // Deep Learning & Computer Vision
+    { name: "PyTorch", icon: Brain },
+    { name: "TensorFlow & Keras", icon: Brain },
+    { name: "CNNs", icon: Brain },
+    { name: "OpenCV & Computer Vision", icon: Eye },
+
+    // NLP, LLMs & GenAI
+    { name: "Transformers & Hugging Face", icon: Layers },
+    { name: "NLP (NLTK, spaCy)", icon: Layers },
+    { name: "LangChain & LlamaIndex", icon: Bot },
+    { name: "Multi-Agent Systems", icon: Bot },
+    { name: "Prompt Engineering & GenAI APIs", icon: Sparkles },
+
+    // MLOps & Backend Deployment
+    { name: "FastAPI", icon: Server },
+    { name: "Docker", icon: Docker },
+    { name: "MLflow & CI/CD Pipelines", icon: Workflow },
+    { name: "Streamlit", icon: LayoutDashboard },
+
+    // Databases & Cloud
+    { name: "Microsoft SQL Server", icon: Database },
+    { name: "MongoDB & Vector Search", icon: Database },
+    { name: "AWS (S3, EC2, SageMaker)", icon: Cloud },
+
+    // BI & Visualization
+    { name: "Power BI", icon: BarChart3 },
+    { name: "IBM Cognos Analytics", icon: PieChart },
+
+    // Developer Tools
     { name: "Git", icon: GitBranch },
     { name: "GitHub", icon: Icons.github },
     { name: "VS Code", icon: Code },
@@ -92,12 +135,12 @@ export const DATA = {
       href: "https://lnkd.in/p/dYh9eWQU",
       badges: ["Professional Certificate"],
       location: "Online",
-      title: "Data Analyst Trainee",
+      title: "Data Analyst & Applied ML Trainee",
       logoUrl: "/ibm.png",
       start: "16 Feb 2026",
       end: "19 Feb 2026",
       description:
-        "Completed rigorous hands-on curriculum encompassing data extraction, data cleaning, analysis, and visualization. Built real-world dashboards in Power BI and IBM Cognos Analytics using Python (Pandas, NumPy) and SQL.",
+        "Completed rigorous hands-on curriculum encompassing data extraction, data cleaning, analysis, predictive modeling, and visualization. Built real-world dashboards in Power BI and IBM Cognos Analytics using Python (Pandas, NumPy) and SQL.",
     },
     {
       company: "EduPyramids & SINE, IIT Bombay",
@@ -152,18 +195,51 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Orbit Dashboard",
+      title: "Enterprise Sales Forecasting & MLOps Pipeline",
       href: "#",
-      dates: "2024",
+      dates: "2025",
       active: true,
       description:
-        "Analyzed sample datasets using Python to identify key trends and patterns. Wrote optimized SQL queries to filter, sort, and summarize data for dashboard visualization, and structured an end-to-end data-driven platform.",
+        "Engineered an end-to-end sales forecasting and inventory demand planning system. Automated Microsoft SQL Server feature extraction with rolling lag variables, trained XGBoost and LightGBM models with MLflow experiment tracking (achieving an 18% MAPE improvement over baselines), deployed a sub-45ms asynchronous FastAPI inference microservice, and packaged the solution with Docker and Streamlit.",
       technologies: [
         "Python",
-        "SQL",
-        "MySQL",
-        "Data Analysis",
-        "Data Cleaning",
+        "Microsoft SQL Server",
+        "Pandas",
+        "Scikit-learn",
+        "XGBoost",
+        "LightGBM",
+        "MLflow",
+        "FastAPI",
+        "Docker",
+        "Streamlit",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/sales-dashboard.jpg",
+      video: "",
+    },
+    {
+      title: "Autonomous Multi-Agent Research Assistant",
+      href: "#",
+      dates: "2025",
+      active: true,
+      description:
+        "Architected an autonomous multi-agent research and knowledge synthesis platform using LangChain and Gemini API. Implemented hybrid RAG with MongoDB vector search, citation verification agents, asynchronous FastAPI worker queues, and an interactive Streamlit UI displaying real-time agent reasoning steps and exportable reports.",
+      technologies: [
+        "Python",
+        "LangChain",
+        "Gemini API",
+        "MongoDB",
+        "Vector Search",
+        "LlamaIndex",
+        "FastAPI",
+        "Streamlit",
+        "Prompt Engineering",
       ],
       links: [
         {
@@ -176,19 +252,22 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Sales Data Analysis Dashboard",
+      title: "Real-Time Industrial Defect Detection System",
       href: "#",
-      dates: "2024",
+      dates: "2025",
       active: true,
       description:
-        "Cleaned and preprocessed sales data using Pandas and NumPy for analysis-ready datasets. Wrote SQL queries to extract revenue trends and regional performance insights, and built interactive dashboards in Power BI and IBM Cognos Analytics to visualize KPIs.",
+        "Developed a deep learning computer vision pipeline with PyTorch and OpenCV. Fine-tuned a CNN classifier using transfer learning on 10,000+ surface defect images achieving 93.4% accuracy (0.92 F1-score), and deployed a low-latency (28+ FPS) FastAPI inference microservice with live Streamlit monitoring and defect alert thresholds.",
       technologies: [
         "Python",
-        "SQL",
-        "Power BI",
-        "IBM Cognos Analytics",
-        "Pandas",
-        "NumPy",
+        "PyTorch",
+        "Torchvision",
+        "OpenCV",
+        "CNN",
+        "Transfer Learning",
+        "FastAPI",
+        "Docker",
+        "Streamlit",
       ],
       links: [
         {
@@ -197,7 +276,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/sales-dashboard.jpg",
+      image: "/defect-detection.jpg",
       video: "",
     },
   ],
